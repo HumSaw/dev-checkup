@@ -1,0 +1,21 @@
+{
+  "name": "dev-checkup",
+  "version": "0.1.0",
+  "description": "Ten fast, local checks for repository health in one zero-dependency CLI.",
+  "type": "module",
+  "bin": { "dev-checkup": "bin/dev-checkup.js" },
+  "exports": "./src/index.js",
+  "files": ["bin", "src", "README.md", "LICENSE", "CHANGELOG.md"],
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check bin/dev-checkup.js && node --check src/index.js",
+    "prepack": "npm run check && npm test"
+  },
+  "engines": { "node": ">=20" },
+  "keywords": ["cli", "developer-tools", "repository", "security", "ci", "lint"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/HumSaw/dev-checkup.git" },
+  "bugs": { "url": "https://github.com/HumSaw/dev-checkup/issues" },
+  "homepage": "https://github.com/HumSaw/dev-checkup#readme",
+  "publishConfig": { "access": "public", "provenance": true }
+}

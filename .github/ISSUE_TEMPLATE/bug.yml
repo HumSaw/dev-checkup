@@ -1,0 +1,20 @@
+name: Bug report
+description: Report a false positive, missed finding, or CLI failure
+title: "bug: "
+body:
+  - type: textarea
+    attributes:
+      label: Minimal reproduction
+      description: Include synthetic files and the exact command; remove secrets and private source.
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Node.js and dev-checkup versions
+    validations:
+      required: true
