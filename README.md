@@ -71,6 +71,15 @@ dev-checkup webhooks event.json --keys customer_id,phone
 
 The parsers are intentionally conservative and dependency-free. `actions` scans conventional workflow YAML lines rather than fully interpreting YAML; `env`, `case`, and `boundaries` use source patterns rather than language ASTs; `licenses` inspects installed Node packages and is not legal advice; `shape` infers array shape from the first element; `weight` scans the working tree rather than invoking Git. Findings should be reviewed before blocking releases.
 
+## Related tools
+
+`dev-checkup` covers general repository hygiene. For coding-agent configuration specifically:
+
+- **[ctxbudget](https://github.com/HumSaw/ctxbudget)** estimates fixed context and MCP tool-schema cost.
+- **[RuleTrace](https://github.com/HumSaw/ruletrace)** discovers instruction files and potential policy conflicts.
+
+All three favor deterministic local analysis and machine-readable output.
+
 ## Development
 
 ```bash
